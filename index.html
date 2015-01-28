@@ -1,23 +1,80 @@
 ---
-layout: default
+layout: home
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="home" style="min-height: 400px">
+  <img src="/assets/yop-fb.jpg" style="width:300px; float:left;margin-right: 2em;margin-top:0px;margin-bottom: 2em">
+  <div class="hola" style="float:left;max-width: 400px">
+  <h1 style="color: orange; font-weight: bold">¡Hola!</h1>
+  <p class="intro" style="font-size: 160%">Welcome to the personal webpage of <strong>Juan Manuel Merlos</strong>.  
+  </p>
+  <p class="intro" style="font-size: 120%">
+    <span style="color: blue">I am a dreamer.</span><br> 
+    <span style="color: green">I am a geek.</span><br>
+    <span style="color: brown">I am an eternal learner</span>.
+    <br> 
+<span style="color:purple">I am a citizen of the World made in Spain.</span><br>
+<span style="color: olive">And I create mobile and web services.</span><br>
+  </p>
+<a href="/about/">more about me</a>
 </div>
+
+
+<br style="clear:both"> 
+
+<p><small style="color:grey">Depending on the nature of each article it may be written in English, Spanish or both. 
+<br>
+ <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss"></i> Subscribe RSS </a></p> 
+</small>
+</p>
+
+
+<div class="posts-col posts-col-1">
+  
+<h2 class="post-title">Artículos en español</h2>
+
+<ul class="post-list">
+{% assign posts=site.posts | where:"lang", "es" %}  
+{% for post in posts %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <h2 class="bottom-close">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      {% assign postes=site.posts | where: "post_id", post.post_id | where: "lang", "en"%} 
+      {% if postes[0] %}
+        <small><a class="greyed" href="{{ postes[0].url | prepend: site.baseurl }}" title="{{ postes[0].title }}">read it in English</a></small>
+      {% endif %}
+    </li>
+{% endfor %}
+</ul>
+</div>
+
+
+{% comment %}
+TODO: DRY this part. create an include with an arg: lang
+  > include posts_list lang=es
+{% endcomment %}
+<div class="posts-col posts-col-2">
+  
+<h2 class="post-title">Articles in broken English</h2>   
+<ul class="post-list">
+{% assign posts=site.posts | where:"lang", "en" %}  
+{% for post in posts %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <h2 class="bottom-close">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      {% assign postes=site.posts | where: "post_id", post.post_id | where: "lang", "es"%} 
+      {% if postes[0] %}
+        <small><a class="greyed" href="{{ postes[0].url | prepend: site.baseurl }}" title="{{ postes[0].title }}">leerlo en español</a></small>
+      {% endif %}
+    </li>
+{% endfor %}
+</ul>
+</div>
+
+  
+   
+

@@ -120,6 +120,24 @@
     padding-left: $spacing-unit / 2;
 }
 
+.posts-col {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+}
+
+.posts-col-1 {
+  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+  width:         calc(50% - (#{$spacing-unit} / 2));
+  
+}
+
+.posts-col-2 {
+    width: -webkit-calc(48% - (#{$spacing-unit} / 2));
+    width:         calc(48% - (#{$spacing-unit} / 2));
+}
+
+
 .footer-col-1 {
     width: -webkit-calc(35% - (#{$spacing-unit} / 2));
     width:         calc(35% - (#{$spacing-unit} / 2));
@@ -154,6 +172,12 @@
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
         width:         calc(100% - (#{$spacing-unit} / 2));
     }
+    .posts-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+    
 }
 
 

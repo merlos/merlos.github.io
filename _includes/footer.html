@@ -2,13 +2,15 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>{{ site.description }}</li>
+          <a href="mailto:%6a%6d%6d%65%72%6c%6f%73%40%6d%65%72%6c%6f%73%2e%6f%72%67">jmmerlos@merlos.org</a>
+          <br>
+          <small>Made with <i class="fa fa-heart"></i>
+ v7.0 1998-2015</small>
         </ul>
       </div>
 
@@ -46,10 +48,12 @@
       </div>
 
       <div class="footer-col  footer-col-3">
-        <p class="text">{{ site.description }}</p>
+        <p><small>{% include license.html %}</small></p>
+        <p><small>The source code of this web is available at <a href="http://github.com/merlos/merlos.github.io/">GitHub</small></p>
       </div>
-    </div>
 
+    </div>
+    
   </div>
 
 </footer>

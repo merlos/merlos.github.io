@@ -7,9 +7,31 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
+  
+
 
   <article class="post-content">
     {{ content }}
   </article>
-
+  <div class="share">
+  <!-- twitter -->
+    <div style="float:left;width: 150px;height: 30px">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="merlos">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+  <!-- end twitter -->
+  <!-- facebook -->
+  <div style="float:left" id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <div style="float:left; width: 150px;height: 30px" class="fb-share-button" data-href="{{page.url}}" data-layout="button_count"></div>
+  <!-- end facebook-->
+  <!-- g plus -->
+  <div style="float:left; width: 150px"class="g-plus" data-action="share" data-height="15"></div>
+   <!-- g plus -->
 </div>
