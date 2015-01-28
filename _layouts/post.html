@@ -13,6 +13,8 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
+  
+    
   <div class="share">
   <!-- twitter -->
     <div style="float:left;width: 150px;height: 30px">
@@ -35,3 +37,20 @@ layout: default
   <div style="float:left; width: 150px"class="g-plus" data-action="share" data-height="15"></div>
    <!-- g plus -->
 </div>
+
+
+<!-- comments -->
+
+{% if page.comments %}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    var disqus_shortname = 'merlos';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+{% endif%}
