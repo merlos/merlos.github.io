@@ -1,13 +1,17 @@
 # Site settings
-title: Juan Manuel Merlos
+title: Juan M. Merlos web
 email: jmmerlos@merlos.org
 description: > # this means to ignore newlines until "baseurl:"
-  Personal webpage of Juan Manuel Merlos. I create mobile and web services. 
+  Personal webpage of Juan Manuel Merlos. 
+  <br>I create mobile and web services. 
   
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://merlos.org" # the base hostname & protocol for your site
 twitter_username: merlos
 github_username:  merlos
+
+gems:
+  - jekyll-redirect-from
 
 # Build settings
 markdown: kramdown

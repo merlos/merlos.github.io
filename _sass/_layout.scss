@@ -185,6 +185,10 @@
 /**
  * Page content
  */
+.post {
+  max-width: $content-width / 1.5;
+}
+
 .page-content {
     padding: $spacing-unit 0;
 }
