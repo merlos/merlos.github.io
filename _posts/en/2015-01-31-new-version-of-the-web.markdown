@@ -3,7 +3,8 @@ layout: post
 title:  "New year and new web!"
 date: 	  2015-01-31 17:00:00
 post_id: blog1
-comments: true
+comments: false
+keywords: "update, new version, wordpress, get rid off, merlos, personal web" 
 categories:
   - merlos 
 
@@ -12,14 +13,14 @@ image: 'assets/lucky-cat.jpg'
 After a couple of years without caring about it, I've updated this website. This time it has not only been a simple makeup, but a whole change. The goal with this update is to break the barriers that made me not updating the contents.
 
 Additionally, I wanted to:
- - Get rido of the requirement of a database (mysql or so)
+ - Stop using a database (mysql, pg, ...)
  - Some look & feel changes.
  - Simple content updates / blogging
  - Use a free hosting if possible.
 
 Appart from these, I've decided to get rid of almost all the contents of the old web. I felt they were outdated and no longer useful. These contents included some tutorials on how install and configure GNU/Linux, Mapserver or my articles of the DTFzine. Most of these texts were written in the early 2000s...  I'm only keeping the tutorial on [How to make the Pringles Antenna (in Spanish)](/documentos/articulos/41-construccion-de-una-antena-casera-pringles.html), which I think is still useful.
 
-Initially, I'm also going to  remove the old blog posts handled by an extremely outdated [wordpress](http://www.wordpress.org). Using wordpress has two disadvantages. First, for security reasons, it is recommended to update it from time to time to a newer version and I never used to do this. Second, every time you migrate to a new hosting you have to configure it again (database and checking that the upload folders have the right permissions, etc.).
+I still have to decide if I am going to import the old blog posts handled by an extremely outdated [wordpress](http://www.wordpress.org). Using a local copy of wordpress has two disadvantages. First, it is recommended to update it from time to time to a newer version for security reasons, and I never used to do this. Second, every time you migrate to a new hosting you have to configure it again (database and checking that the upload folders have the right permissions, etc.).
 
 ##The solution: Jekyll + GitHub.
 
