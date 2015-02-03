@@ -28,7 +28,6 @@ keywords: juan, merlos, juan manuel merlos, web, official web, página personal
 
 <p><small style="color:grey">Depending on the nature of each article it may be written in English, Spanish or both. 
 <br>
- 
 </small>
 </p>
 
@@ -38,8 +37,13 @@ keywords: juan, merlos, juan manuel merlos, web, official web, página personal
 <h2 class="post-title">Artículos en español</h2>
 
 <ul class="post-list">
+  
 {% assign posts=site.posts | where:"lang", "es" %}  
 {% for post in posts %}
+  {%if post.hide != true %}
+    {% comment %}I may not want to display here all posts, so i defined a variable
+    to hide them.
+    {% endcomment %}
     <li>
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       <h2 class="bottom-close">
@@ -50,6 +54,7 @@ keywords: juan, merlos, juan manuel merlos, web, official web, página personal
         <small><a class="greyed" href="{{ postes[0].url | prepend: site.baseurl }}" title="{{ postes[0].title }}">read it in English</a></small>
       {% endif %}
     </li>
+  {% endif %}
 {% endfor %}
 </ul>
 </div>
