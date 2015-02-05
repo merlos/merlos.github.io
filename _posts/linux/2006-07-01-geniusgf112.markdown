@@ -2,7 +2,7 @@
 layout: post
 post_id: geniusgf112
 lang: es
-title: "linux: Configuración de webcam Genius Videocam GF112 en Debian"
+title: "Genius Videocam GF112: Configuración de webcam en Debian"
 description: "Aprende cómo configurar la webcam de Genius en una máquina con GNU/Linux"
 keywords: "linux, gnu, webcam, genius gf112, gf112, debian, configurar, tutorial"
 comments: false

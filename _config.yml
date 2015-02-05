@@ -16,6 +16,7 @@ gems:
 # Build settings
 markdown: kramdown
 
+permalink: /:categories/:year/:month/:title.html
 defaults:
   -
     scope:
@@ -29,3 +30,35 @@ defaults:
     values:
       layout: post
       lang: es
+  -
+    scope:
+      path: _posts/wordpress
+    values:
+      layout: post
+      lang: es
+      disqus_comments: false
+      hide_index: true
+  -
+    scope:
+      path: _posts/articles
+    values:
+      layout: post
+      lang: es
+      disqus_comments: false
+      hide_index: true
+  -
+    scope:
+      path: _posts/adianteapps
+    values:
+      layout: post
+      lang: es
+      disqus_comments: false
+      hide_index: true  
+  -
+    scope:
+      path: _posts/linux
+    values:
+      layout: post
+      lang: es
+      disqus_comments: false
+      hide_index: true  

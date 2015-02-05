@@ -217,3 +217,16 @@ pre {
   
   min-width: 600px;
 }
+
+.social-button {
+  min-width: 40px;
+  padding-left: 20px;
+  color: black;
+  
+  &:hover {
+    color: $brand-color;
+  };
+  &:visited {
+    color: green;
+  };
+}

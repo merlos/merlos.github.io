@@ -17,7 +17,7 @@ keywords: juan, merlos, juan manuel merlos, web, official web, página personal
     <span style="color: brown">I am an eternal learner</span>.
     <br> 
 <span style="color:purple">I am a citizen of the World made in Spain.</span><br>
-<span style="color: olive">And I create mobile and web services.</span><br>
+<span style="color: olive">And I design mobile and web services.</span><br>
   </p>
 <strong><a href="/about/"><i class="fa fa-info-circle"></i>
  more about me</a></strong>
@@ -26,7 +26,7 @@ keywords: juan, merlos, juan manuel merlos, web, official web, página personal
 
 <br style="clear:both"> 
 
-<p><small style="color:grey">Depending on the nature of each article it may be written in English, Spanish or both. 
+<p style="text-align:center"><small style="color:grey">Depending on the nature of each article it may be written in English, Spanish or both. 
 <br>
 </small>
 </p>
@@ -40,46 +40,27 @@ keywords: juan, merlos, juan manuel merlos, web, official web, página personal
   
 {% assign posts=site.posts | where:"lang", "es" %}  
 {% for post in posts %}
-  {%if post.hide != true %}
+  {%if post.hide_index != true %}
     {% comment %}I may not want to display here all posts, so i defined a variable
     to hide them.
     {% endcomment %}
     <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h2 class="bottom-close">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
-      {% assign postes=site.posts | where: "post_id", post.post_id | where: "lang", "en"%} 
-      {% if postes[0] %}
-        <small><a class="greyed" href="{{ postes[0].url | prepend: site.baseurl }}" title="{{ postes[0].title }}">read it in English</a></small>
-      {% endif %}
+      {% include post-list-item.html post=post %}
     </li>
   {% endif %}
 {% endfor %}
 </ul>
 </div>
-
-
-{% comment %}
-TODO: DRY this part. create an include with an arg: lang
-  > include posts_list lang=es
-{% endcomment %}
-<div class="posts-col posts-col-2">
-  
-<h2 class="post-title">Articles in broken English</h2>   
+<div class="posts-col posts-col-2">  
+<h2 class="post-title">Articles in my broken English</h2>   
 <ul class="post-list">
 {% assign posts=site.posts | where:"lang", "en" %}  
 {% for post in posts %}
+  {%if post.hide_index != true %}
     <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h2 class="bottom-close">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
-      {% assign postes=site.posts | where: "post_id", post.post_id | where: "lang", "es"%} 
-      {% if postes[0] %}
-        <small><a class="greyed" href="{{ postes[0].url | prepend: site.baseurl }}" title="{{ postes[0].title }}">leerlo en español</a></small>
-      {% endif %}
+      {% include post-list-item.html post=post %}
     </li>
+      {% endif %}
 {% endfor %}
 </ul>
 </div>

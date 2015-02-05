@@ -4,14 +4,35 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+    
+    <a class="social-button" target="_blank" href="https://twitter.com/intent/tweet?text={{page.title | cgi_escape}}&amp;url={{ page.url | prepend: site.baseurl | prepend: site.url| uri_escape }}&amp;via=merlos">
+        <i class="fa fa-twitter"></i> Tweet
+    </a>
+
+    <a class="social-button" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl | prepend: site.url | cgi_escape }}">
+        <i class="fa fa-facebook-official"></i> Share
+    </a>
+
+
+    <a class="social-button" target="_blank" href="https://getpocket.com/save?title={{page.title | cgi_escape}}&amp;url={{ page.url | prepend: site.baseurl | prepend: site.url | cgi_escape }}">
+       <i class="fa fa-chevron-circle-down"></i>
+        Pocket
+    </a>
+
+    
+    </p>
+  
   </header>
   <article class="post-content">
     {{ content }}
   </article>
   
+  
+  
+  
     
-  <div class="share">
+  <div class="share">  
   <!-- twitter -->
     <div style="float:left;width: 150px;height: 30px">
     <a href="https://twitter.com/share" class="twitter-share-button" data-via="merlos">Tweet</a>
@@ -37,7 +58,7 @@ layout: default
 
 <!-- comments -->
 
-{% if page.comments %}
+{% if page.disqus_comments %}
   <br class="clearfix">
   <h2>What do you think?</h2>
   <div id="disqus_thread"></div>

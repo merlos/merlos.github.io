@@ -2,7 +2,7 @@
 layout: post
 post_id: hosts-access
 lang: es
-title: "linux: uso de /etc/hosts.allow y /etc/hosts.deny"
+title: "Seguridad: uso de /etc/hosts.allow y /etc/hosts.deny"
 description: "Estos ficheros sirven para permitir o denegar el acceso a los servicios de un sistema"
 keywords: "hosts, allow, deny, linux, gnu, debian, tutorial"
 comments: false

@@ -2,7 +2,7 @@
 layout: post
 post_id: user-admin
 lang: es
-title: "linux: Administración de usuarios y permisos"
+title: "Usuarios: Administración de usuarios y permisos en GNU/Linux"
 description: "Texto sobre la administración de usuarios y permisos en GNU/Linux"
 keywords: "admin, user, linux, administración, usuarios, gnu, linux, slackware"
 comments: false
