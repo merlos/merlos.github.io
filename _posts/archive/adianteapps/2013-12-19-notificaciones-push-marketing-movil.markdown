@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "adiante apps: Notificaciones Push, una herramienta de marketing móvil efectiva"
+title: "Notificaciones Push, una herramienta de marketing móvil efectiva"
 post_id: push
 disqus_comments: false
 description: "Las notificaciones push son mensajes tipo whatsapp que te llegan al móvil. Es una herramienta de marketing muy efectiva, aprende por qué"

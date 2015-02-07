@@ -3,7 +3,9 @@
 <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} {% if post.disqus_comments %}<i class="fa fa-comment" title="comments on"></i> {% endif %}</span>
 
 <h2 class="bottom-close">
-  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+ <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+   {%if post.lang == "en" %} <img src="/assets/en.png" alt="ENGLISH">{%endif%} 
+   {{ post.title }} </a>
 </h2>
 {%if post.lang == "es" %}
       {% assign postes=site.posts | where: "post_id", post.post_id | where: "lang", "en"%} 

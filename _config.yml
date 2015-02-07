@@ -32,33 +32,10 @@ defaults:
       lang: es
   -
     scope:
-      path: _posts/wordpress
-    values:
-      layout: post
-      lang: es
-      disqus_comments: false
-      hide_index: true
-  -
-    scope:
-      path: _posts/articles
-    values:
-      layout: post
-      lang: es
-      disqus_comments: false
-      hide_index: true
-  -
-    scope:
-      path: _posts/adianteapps
+      path: _posts/archive
     values:
       layout: post
       lang: es
       disqus_comments: false
       hide_index: true  
-  -
-    scope:
-      path: _posts/linux
-    values:
-      layout: post
-      lang: es
-      disqus_comments: false
-      hide_index: true  
+  

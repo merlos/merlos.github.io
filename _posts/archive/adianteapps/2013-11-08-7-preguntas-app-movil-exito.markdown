@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "todostartups: 7 preguntas que has de responder para que tu app móvil sea un éxito"
+title: "7 preguntas que has de responder para que tu app móvil sea un éxito"
 post_id: app-exito
 disqus_comments: false
 description: "Aprende cómo puedes promocionar una aplicación móvil"
 keywords: "promocion, app, promocionar app, descargas, conseguir descargas" 
 categories:
-  - adianteapps
   - todostartups 
 ---
 

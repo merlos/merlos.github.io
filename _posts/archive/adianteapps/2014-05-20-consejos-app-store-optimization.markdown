@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "todostartups: Consejos App Store Optimization"
+title: "Consejos App Store Optimization"
 post_id: aso-todostartups
 disqus_comments: false
 description: "Aprende cómo puedes promocionar una aplicación móvil mediante App Store optimization"
 keywords: "promocion, app, promocionar app, descargas, conseguir descargas" 
 categories:
-  - adianteapps
   - todostartups 
 ---
 

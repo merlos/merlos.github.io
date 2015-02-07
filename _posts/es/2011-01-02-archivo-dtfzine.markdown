@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Archivo: Mis Artículos para el DTFzine"
-post_id: linux-compilation
+post_id: dtfzine-archive
 disqus_comments: false
 lang: es
 keywords: "seguridad, es" 

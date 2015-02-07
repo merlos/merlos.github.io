@@ -26,41 +26,32 @@ keywords: juan, merlos, juan manuel merlos, web, official web, página personal
 
 <br style="clear:both"> 
 
-<p style="text-align:center"><small style="color:grey">Depending on the nature of each article it may be written in English, Spanish or both. 
-<br>
+  
+<h2 class="post-title">Little big thoughts</h2>
+<p><small style="color:grey">Depending on the nature of each article it may be written in English, Spanish or both. 
 </small>
 </p>
 
-
-<div class="posts-col posts-col-1">
-  
-<h2 class="post-title">Artículos en español</h2>
-
 <ul class="post-list">
   
-{% assign posts=site.posts | where:"lang", "es" %}  
+{% assign posts=site.posts %}  
+{% assign displayed_articles = " " %}
 {% for post in posts %}
-  {%if post.hide_index != true %}
-    {% comment %}I may not want to display here all posts, so i defined a variable
-    to hide them.
+  {% if post.hide_index != true %}
+    {% comment %}
+      I may not want to display here all posts, so i defined a variable
+      to hide them.
     {% endcomment %}
+    {% if displayed_articles contains post.post_id %}
+    <!-- skipping repeating {{ post.post_id }} {{ post.id }}-->
+    {% else %}
     <li>
+      
+      {% capture displayed_articles %}{{ displayed_articles }} {{ post.post_id }}{% endcapture %}
       {% include post-list-item.html post=post %}
     </li>
+    {% endif %}
   {% endif %}
-{% endfor %}
-</ul>
-</div>
-<div class="posts-col posts-col-2">  
-<h2 class="post-title">Articles in my broken English</h2>   
-<ul class="post-list">
-{% assign posts=site.posts | where:"lang", "en" %}  
-{% for post in posts %}
-  {%if post.hide_index != true %}
-    <li>
-      {% include post-list-item.html post=post %}
-    </li>
-      {% endif %}
 {% endfor %}
 </ul>
 </div>

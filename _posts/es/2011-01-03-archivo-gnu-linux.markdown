@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Archivo: Recopilación de mis tutoriales de GNU/Linux"
-post_id: linux-compilation
+post_id: linux-archive
 disqus_comments: false
 lang: es
 keywords: "gnu,gnu linux, debian, tutoriales, como, howtos, en español" 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Archivo: Artículos de Mapserver"
-post_id: linux-compilation
+post_id: mapserver-archive
 disqus_comments: false
 lang: es
 keywords: "mapserver, mapas, articulos, archivo, phpmapscript, postgis, postgresql" 
