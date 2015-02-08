@@ -10,7 +10,7 @@ url: "http://merlos.org" # the base hostname & protocol for your site
 twitter_username: merlos
 github_username:  merlos
 
-image: "/assets/yop-fb.jpg" #default image for twitter card, facebook shares
+image: "/assets/yop-fb.jpg" #default image for twitter card
 
 gems:
   - jekyll-redirect-from

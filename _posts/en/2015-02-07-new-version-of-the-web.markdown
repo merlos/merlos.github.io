@@ -8,7 +8,7 @@ keywords: "update, new version, wordpress, get rid off, merlos, personal web"
 categories:
   - merlos 
 
-image: 'assets/lucky-cat.jpg'
+image: '/assets/lucky-cat.jpg'
 ---
 
 After a couple of years without caring about it, I've updated this website. This time it has not only been a simple makeup, but a whole change. The goal with this update is to break the barriers that made me not updating the contents.
