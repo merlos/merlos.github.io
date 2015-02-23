@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "New year and new web!"
-date: 	  2015-01-31 17:00:00
+date: 	  2015-02-07 17:00:00
 post_id: blog1
 disqus_comments: true
 keywords: "update, new version, wordpress, get rid off, merlos, personal web" 
