@@ -8,7 +8,7 @@ In the web you can find some articles about things I am interested in as well as
 
 * The web is built using [jekyll](http://www.jekyllrb.com) (no database, simple update awesome!)
 * It also uses the iconset provided by [fontawesome](http://fortawesome.github.io/Font-Awesome/icons/)
-* To provide partial support of multilingual, I followed [this article from Sylvain Durand](https://sylvain.durand.tf/making-jekyll-multilingual/)
+* To provide partial support of multilingual, I followed [this article from Sylvain Durand](http://sylvaindurand.org/making-jekyll-multilingual/)
 * Redirecting webpages: http://joshualande.com/redirect-urls-jekyll-github/
 
 # Licenses
