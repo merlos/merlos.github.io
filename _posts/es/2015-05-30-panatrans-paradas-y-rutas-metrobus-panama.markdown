@@ -10,7 +10,7 @@ categories:
 image: '/assets/posts/2015-panatrans/panatrans-twitter-card.png'
 ---
 
-Estas últimas semanas he estado en un proceso de transición profesional. Esto me ha dado la oportunidad de tener algo de tiempo que decidí usar paraaprender algunas de las nuevas herramientas. Como soy partidario del _learn by doing_ o _aprender haciendo_, mi idea era hacer un pequeño proyecto en el que adquirir el conocimiento. Gracias a esta experiencia en primera persona, posteriormente podré tomar mejores decisiones a nivel profesional.
+Estas últimas semanas he estado en un proceso de transición profesional. Esto me ha dado la oportunidad de tener algo de tiempo que decidí usar para aprender algunas de las nuevas herramientas. Como soy partidario del _learn by doing_ o _aprender haciendo_, mi idea era hacer un pequeño proyecto en el que adquirir el conocimiento. Gracias a esta experiencia en primera persona, posteriormente podré tomar mejores decisiones a nivel profesional.
 
 Por otro lado, si me ponía a trabajar en algo, quería que tuviera tanto un impacto social como personal y que fuera coherente con mis convicciones. Así es como nació la idea de __[Panatrans](http://www.panatrans.org), un mapa colaborativo con las paradas y rutas de Metrobus de Panamá__.
 
