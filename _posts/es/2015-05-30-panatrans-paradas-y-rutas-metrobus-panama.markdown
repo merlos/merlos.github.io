@@ -10,34 +10,34 @@ categories:
 image: '/assets/posts/2015-panatrans/panatrans-twitter-card.png'
 ---
 
-Estas últimas semanas he estado en un proceso de transición profesional. Esto me ha dado la oportunidad de tener algo de tiempo que decidí aprovechar en aprender algunas de las nuevas herramientas del mundo de la web. Como soy partidario del _learn by doing_ o _aprender haciendo_, la idea era hacer un pequeño proyecto en el que adquirir el conocimiento. Gracias a esta experiencia en primera persona, posteriormente podré tomar mejores decisiones a nivel profesional.
+Estas últimas semanas he estado en un proceso de transición profesional. Esto me ha dado la oportunidad de tener algo de tiempo que decidí usar paraaprender algunas de las nuevas herramientas. Como soy partidario del _learn by doing_ o _aprender haciendo_, mi idea era hacer un pequeño proyecto en el que adquirir el conocimiento. Gracias a esta experiencia en primera persona, posteriormente podré tomar mejores decisiones a nivel profesional.
 
-Por otro lado, si me ponía a trabajar en algo, quería que tuviera tanto un impacto social como personal, y fue cuando nació la idea de __[Panatrans](http://www.panatrans.org), un mapa colaborativo con las paradas y rutas de Metrobus de Panamá__.
+Por otro lado, si me ponía a trabajar en algo, quería que tuviera tanto un impacto social como personal y que fuera coherente con mis convicciones. Así es como nació la idea de __[Panatrans](http://www.panatrans.org), un mapa colaborativo con las paradas y rutas de Metrobus de Panamá__.
 
 ![ios GPS Tracker]({{page.image}})
 
 
 ## El problema
 
-Actualmente, resido en Ciudad de Panamá. Tiene aproximadamente 1.5 millones de habitantes y que consta de un servicio de bus público llamado __Metrobus__ que, aunque ciertamente es MUY mejorable, __lo usa entre un 20% y un 35% de la población de la ciudad cada día__ (unos 730.000 viajes según fuentes oficiales). 
+Actualmente resido en Ciudad de Panamá. Esta urbe tiene aproximadamente 1.5 millones de habitantes y consta de un servicio de bus público llamado __Metrobus__ que, aunque ciertamente es MUY mejorable, __lo usa entre un 20% y un 35% de la población de la ciudad cada día__ (unos 730.000 viajes según fuentes oficiales). 
 
-Desde mi punto de vista existe un __problema__ muy importante en el sistema y es __la falta de información__. Cuando llegas a una parada no sabes qué rutas pasan por la misma, ni la frecuencia, ni los horarios. Sólo sabes que hay una parada de bus ¡nada más! De hecho, cada parada, ni siquiera tiene un identificador visible, como puede ser un nombre o un número.
+Desde mi punto de vista hay __problema__ muy importante en el sistema y es __la falta de información__. Cuando llegas a una parada no sabes qué rutas pasan por la misma, ni la frecuencia, ni los horarios. Solo sabes que hay una parada de bus ¡nada más! De hecho, cada parada ni siquiera tiene un identificador visible como puede ser un nombre o un número.
 
 ![Parada de metrobus](/assets/posts/2015-panatrans/parada-bus-panama.jpg)
 
 
 Uno puede pensar que aunque no esté in situ, en [su web](http://www.mibus.com.pa) o en una app móvil existe algo de información. Un lugar donde puedas ver, para cada parada, qué rutas pasan.
 
-Efectivamente, hay "algo" de información. Mi Bus, la empresa responsable de la operación del servicio, ha publicado unos ficheros PDF con la información de las rutas. En su web dispones de un desplegable con ~200 entradas y cada entrada te permite visualizar un PDF con la información de una ruta:
+Efectivamente, hay "algo" de información. Mi Bus, la empresa responsable de la operación del servicio, ha publicado unos ficheros PDF con la información de las rutas. En su web dispones de un desplegable con ~200 entradas y cada entrada te permite visualizar un PDF con la información de una ruta.
 
 ![Captura de web de Metrobus](/assets/posts/2015-panatrans/captura-mibus-rutas.png)
 
 
-Navegando por esta información te puedes encontrar con varios problemas. En ocasiones, los PDF no existen, otras veces están anticuados sin información actualizada de los cambios que ha habido en las rutas. También puede suceder que haya rutas repetidas o que haya PDFs de rutas que ya no existe, o todo lo contrario, que haya rutas que existen pero no tienen asociado un PDF. 
+Navegando por esta información te puedes encontrar con varios problemas. En ocasiones los PDF no existen, otras veces están anticuados y sin información actualizada de los cambios que ha habido en las rutas. También puede suceder que haya rutas repetidas o que haya PDFs de rutas que ya no existen, incluso todo lo contrario, que haya rutas que existen pero no aparecen en la web. 
 
 ![Captura de web de Metrobus](/assets/posts/2015-panatrans/pdf-mibus.png)
 
-Debido a esta estructura de una ruta por PDF, si quisieras saber qué rutas pasan por una cierta parada, tendrías que ir PDF a PDF para ver si pasa por ahí. 
+Debido a esta estructura de una ruta por PDF, si quisieras saber qué rutas pasan por una cierta parada tendrías que ir PDF a PDF para ver si pasa por ahí. 
 
 Esta falta de información genera varios problemas:
 
@@ -47,31 +47,30 @@ Esta falta de información genera varios problemas:
 
 * __Uso poco óptimo del servicio__. En otra ocasión, quería ir a una calle y la parada más cercana que conocía estaba a 1km. El resto del camino lo haría a pie. Sin embargo,  casi llegando a mi destino, me encontré con una parada de otra ruta que desconocía y que me hubiera sido más conveniente usar (uso poco óptimo).
 
-Además, esta desinformación del usuario demuestra una __falta de voluntad por parte de los gestores__ de dar un buen servicio. Como he comentado, la falta de información degenera en que se use menos el sistema, pero si como gestor te da igual... apaga y vámonos. 
-
+Además, esta carencia información para el usuario demuestra una __falta de voluntad por parte de los gestores de dar un buen servicio__.
 
 ## La solución
 
 La solución planteada, [Panatrans](http://www.panatrans.org), tenía que tener varios aspectos en cuenta: 
 
-* Dado que no había una fuente de información, el sistema tendría que __usar la inteligencia/concimiento colectivo__. Tenía que ser ser una herramienta colaborativa, en la que el contenido fuera generado por los usuarios. Tomé como ejemplo modelos colaborativos tipo [Wikipedia](http://www.wikipedia.org) u [Open Street Map](http://openstreetmap.org).
+* Dado que no había una fuente de información, el sistema tendría que __usar la inteligencia/concimiento colectivo__. Tenía que ser ser una herramienta colaborativa, en la que el contenido fuera generado por los usuarios. Tomé como ejemplo [Wikipedia](http://www.wikipedia.org) y [Open Street Map](http://openstreetmap.org).
 
-* El __tiempo (~1 mes) y los recursos (yo y yo mismo) eran limitados__, por lo que el alcance tenía que estar controlado. Por ejemplo, aunque este proyecto está intrínsecamente ligado a la movilidad, tuve que descartar hacer apps móviles. Sólo me daba tiempo a hacer una web. De hecho, que fuera _responsive_ lo consideré dentro del "si da tiempo...". El objetivo de la web sería ofrecer un interfaz para introducir y ver los datos de las paradas y rutas de metrobus.
+* El __tiempo (~1 mes) y los recursos (yo y yo mismo) eran limitados__, por lo que el alcance tenía que estar controlado. Por ejemplo, aunque este proyecto está intrínsecamente ligado a la movilidad, tuve que descartar hacer apps móviles. Sólo me daba tiempo a hacer una web. De hecho, que fuera _responsive_ lo consideré dentro del "espero que me de tiempo...". El objetivo de esta primera fase sería ofrecer un interfaz web para introducir y ver los datos de las paradas y rutas de metrobus.
 
-  También descarté crear un sistema de usuarios. Por dos motivos, uno por falta de tiempo y por simplificar, y dos, porque el no obligarte a registrarte me parecía que te daba mayor libertad como usuario y rompía una barrera de entrada para colaborar.
+  También descarté crear un sistema control de usuarios. Por dos motivos, uno por falta de tiempo y por simplificar, y dos, porque el no obligarte a registrarte me parecía que te da mayor libertad como usuario y rompe una barrera de entrada para colaborar. Aunque, he de reconocer que tiene el potencial problema del vandalismo.
 
-* Sin embargo, de raíz quería que estuviera __preparado para dar un futuro soporte a apps móviles__, es decir, había que disponer de una API. Además, quería que la web fuera también un cliente puro basado en JavaScript, sin código generado en servidor. Este tipo de webs son las que se llaman SPA ([Single Page Applications](http://en.wikipedia.org/wiki/Single-page_application)), y constan sólo de JavaScript, HTML y CSS. Y son la tendencia actual en los nuevos desarrollos.
+* Sin embargo, de raíz quería que estuviera __preparado para dar un futuro soporte a apps móviles__, es decir, tenía que disponer de una API. Además, quería que la web fuera también un cliente puro basado en JavaScript, sin código generado en servidor. Este tipo de webs son las que se llaman SPA ([Single Page Applications](http://en.wikipedia.org/wiki/Single-page_application)), y constan sólo de JavaScript, HTML y CSS. Y son la tendencia actual en los nuevos desarrollos.
 
 ![Estructura de datos](/assets/posts/2015-panatrans/arquitecture.png)
 
-* Además, quería que fuera un proyecto de basado en __código libre y datos abiertos__ (datos estructurados y procesables). En realidad, cuando pensaba en cómo hacer Panatrans, me imaginaba en cómo me gustaría a mí que fuera el software que utilizara la administración o una empresa que ofreciera un servicio público. 
+* Adicionalmente, quería que fuera un proyecto de basado en __código libre y datos abiertos__ (datos estructurados y procesables). En realidad, cuando pensaba en cómo hacer Panatrans, me imaginaba en cómo me gustaría a mí que fuera el software que utilizara la administración o una empresa que ofreciera un servicio público. 
 
 >    "Este proyecto está financiado por los contribuyentes, es público, 
 >      por lo que el software pertenece a todos y los datos pertenecen a 
->      todos comunidad. Parte de mi labor es facilitar que todo esto
+>      todos. Parte de mi labor es facilitar que todo esto
 >      sea reutilizable y que se pueda innovar basándose en ellos."
 
-  Esta forma de concebir los proyectos públicos de software convierte al __estado en un facilitador de la innovación__. Al igual que las infraestructuras (carreteras, ferrocarriles, aeropuertos) hacen prosperar empresas del sector privado, en el mundo del software y los datos, el estado ayuda al sector privado si ofrece software y datos abiertos. 
+  Esta forma de concebir los proyectos públicos de software convierte al __Estado en un facilitador de la innovación__. Al igual que las infraestructuras (carreteras, ferrocarriles, aeropuertos) hacen prosperar empresas del sector privado, en el mundo del software y los datos, el estado ayuda al sector privado si ofrece software y datos abiertos. 
       
 * Siguiendo esta misma filosofía, los _frameworks_ que usara tenían que ser software libre. Por ejemplo, para los mapas descarté usar Google Maps API, en su lugar usé, [leaflet](http://www.leafletjs.com/) + Open Street Maps, que no tienen nada que envidiarle y son abiertos.
 
@@ -87,9 +86,9 @@ Teniendo en cuenta todo esto, se dividió la parte de software del proyecto en d
  
 ### Los datos
 
-A la hora de estructurar la base de datos usé como punto de partida [GTFS](https://developers.google.com/transit/gtfs/), que es el formato de la información que le facilitan las empresas de transporte público a Google para que lo incorporen a Google Maps. 
+A la hora de estructurar la base de datos usé como punto de partida [GTFS](https://developers.google.com/transit/gtfs/), que es el formato de la información que le facilitan las empresas de transporte público a Google para que lo incorporen a Google Maps y muchas otras herramientas. Me atrevería a decir que es un estándar de facto. 
 
-GTFS es una estructura muy compleja, pero sí que me permitía tener una base extensible. No quiero entrar en detalles, pero básicamente, la información que se recopila es:
+Aunque GTFS fuera una estructura muy compleja, sí que me permitía tener una base extensible. No quiero entrar en detalles, pero básicamente, la información que se recopila en Panatrans es:
 
  * Nombre y geolocalización de las paradas (stops)
  * Nombre y dirección web "oficial" de las rutas (routes)
