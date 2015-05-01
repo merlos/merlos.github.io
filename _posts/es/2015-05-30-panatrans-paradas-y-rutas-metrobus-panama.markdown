@@ -96,9 +96,9 @@ Aunque GTFS fuera una estructura muy compleja, sí que me permitía tener una ba
  
 ![Estructura de datos](/assets/posts/2015-panatrans/data-structure.png)
 
-Dado que una ruta puede tener varios trayectos (trayecto de ida y trayecto de vuelta), también existe este concepto (trip), en la estructura de datos. En realidad una ruta tiene uno o varios trayectos y cada trayecto es el que tiene varias paradas.
+Dado que una ruta puede tener varios trayectos, de ida y  de vuelta), también existe este concepto (trip) en la estructura de datos. Cada trayecto es el que tiene asociadas varias paradas.
 
-El formato de exportación de los datos es [CSV](http://en.wikipedia.org/wiki/Comma-separated_values), un formato que cualquier hoja de cálculo puede leer. 
+El formato de exportación de los datos es [CSV](http://en.wikipedia.org/wiki/Comma-separated_values). Un formato que cualquier hoja de cálculo puede leer. 
 
 Tienes más información sobre esto en el proyecto [panatrans-dataset de GitHub](http://github.com/merlos/panatrans-dataset/).
 
@@ -118,11 +118,11 @@ Aquí están las diapositivas de la presentación [disponibles en SpeakerDeck](h
 
 # Resultados y acogida
 
-__Desde el punto de vista técnico estoy contento con la API__, creo que es muy sencilla, el código es fácil de leer y además incluye _testing_ automatizado (no seguí un [TDD](http://en.wikipedia.org/wiki/Test-driven_development) puro, pero sí que tiene _tests__). Esta técnica no la había usado hasta hace poco y es un gran invento, muy útil cuando hace falta refactorizar el código o hacer "cambios gordos". Quizás para esta primera fase sólo le queda meter algo de seguridad (control de versiones o usuarios).
+__Desde el punto de vista técnico estoy contento con la API__, creo que es muy sencilla, el código es fácil de leer y además incluye _testing_ automatizado (no seguí un [TDD](http://en.wikipedia.org/wiki/Test-driven_development) puro, pero sí que tiene _tests_). Esta técnica no la había usado hasta hace poco y es un gran invento, muy útil cuando hace falta refactorizar el código o hacer "cambios gordos". Quizás para esta primera fase, a la API sólo le queda meter algo de seguridad (bien control de versiones o pensar en implementar lo de los usuarios), y la posibilidad de permitir actualizaciones incrementales, es decir, que la API te informe de los cambios que hubo desde una determinada fecha.
 
-En cuanto a la interfaz web, aunque sí que funcionalmente está bastante avanzada, todavía no la considero terminada, de hecho, __no estoy contento con el estado actual de la web__. Tiene algunos _bugs_, las búsquedas todavía están algo verdes, hay algunas incoherencias/falta de uniformidad tanto en la interacción como en el aspecto visual, faltara integrar la búsqueda de paradas y rutas en el propio mapa (ahora están en páginas separadas), la geolocalización del usuario no funciona bien todavía, y la interacción en el móvil todavía está sin pulir. Pero, bueno... tiempo al tiempo.
+En cuanto a la interfaz web, aunque sí que funcionalmente está bastante avanzada,__no la considero finalizada__. Tiene algunos _bugs_, las búsquedas todavía están algo verdes, hay algunas incoherencias/falta de uniformidad tanto en la interacción como en el aspecto visual, falta integrar la búsqueda de paradas y rutas en el propio mapa (ahora están en páginas separadas), la geolocalización del usuario no funciona bien todavía, y la interacción en el móvil todavía está sin pulir. Pero, bueno... tiempo al tiempo.
 
-Ya desde un punto de vista de la acogida del proyecto, el balance también es positivo. Aunque de forma timida, ya algunos usuarios han aportado su granito de arena, y los comentarios que me dieron en el FLISOL fueron muy positivos, incluso me han contactado responsables de entidades gubernamentales de Panamá. 
+Ya desde un punto de vista de la acogida del proyecto, el balance también es positivo. Aunque de forma timida, algunos usuarios han aportado su granito de arena y los comentarios que me dieron en el FLISOL fueron muy positivos, incluso me han contactado responsables de entidades gubernamentales de Panamá. 
 
 También, [un desarrollador](https://twitter.com/zubietaroberto/status/593591842215751681) me ha contactado mostrando su interés en hacer la app para Android. De hecho ya tiene una versión funcional.
 
@@ -136,8 +136,8 @@ En las redes sociales, a pesar de que apenas estamos empezando el proyecto tiene
 La verdad es que estoy contento: 
 
  * He aprendido cosas nuevas muy útiles para mi carrera profesional.
- * He aportado algo a la sociedad y al bien común.
+ * He aportado mi granito de arena a la sociedad y al bien común.
  * Me han invitado a dar una charla y he conocido a gente interesante.
- * Parcialmente he resuelto un problema: mi desconocimiento de las rutas de metrobus 
+ * Parcialmente he resuelto un problema que tenía: mi desconocimiento de las rutas de Metrobus. 
 
 
