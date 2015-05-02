@@ -13,9 +13,16 @@ image: '/assets/posts/2015-open-gpx-tracker/open-gpx-tracker.png'
 
 When I released the [latest refreshed version of this web]({% post_url en/2015-02-07-new-version-of-the-web %}) in February, I promised myself to write more often... and yes, I know, it seems that I lied... it's been a while since last post! But the truth is that I've been busy writing and learning new stuff. Among them, I learnt some [SWIFT](https://developer.apple.com/swift/), the new programming language of Apple. 
 
-An because I primarily learn by doing, I made an iOS app:  __Open GPX Tracker__.
+An because I primarily learn by doing, I made an iOS app:  [__Open GPX Tracker__](https://itunes.apple.com/app/open-gpx-tracker/id984503772). 
+
+[![Available on the app store](/assets/posts/2015-open-gpx-tracker/download-app-store.svg)](https://itunes.apple.com/app/open-gpx-tracker/id984503772)
+
+
+
+
 
 ![ios GPS Tracker]({{page.image}})
+
 
 Open GPX Tracker is a GPS tracker works on all iOS devices (iPhone, iPad, iPod...). The app tracks your device GPS location and draws the the "line" of your path. Then, you can save it and then export it to [GPX](http://en.wikipedia.org/wiki/GPS_Exchange_Format), a file format that is widely used in many other apps. You can also add waypoints on the map and name them. To run it, you need iOS 7.0 or above. 
 
@@ -38,8 +45,14 @@ Although, I started this project on October 2014, it has not been till this Apri
 
 ### Is it available on the App Store?
 
+__Update 1st May:__ The app has been approved by Apple and now it's __[available on the app store](https://itunes.apple.com/app/open-gpx-tracker/id984503772)__
+
+
+
 Well, I started the publication process a couple of weeks ago. Unfortunately, Apple Rejected it on the first attempt. I [posted an issue in the app project where you have more information](https://github.com/merlos/iOS-Open-GPX-Tracker/issues/1). I sent it again last week, so in the next few days we'll know if it has been rejected again.
 
 Once it is published I will update this post and [share it on twitter (@merlos)](http://twitter.com/merlos).
 
 Meanwhile if you want to run it and you have the iOS development environment, the source code is available on [GitHub](https://github.com/merlos/iOS-Open-GPX-Tracker).
+
+
