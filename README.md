@@ -1,18 +1,30 @@
-# merlos.org
+![ml5 - Nodejs - puppeteer logos](./ml5-nodejs-puppeteer-logos.png)
 
-Source code of [merlos.org](http://www.merlos.org), my personal website.
+# About this
 
-In the web you can find some articles about things I am interested in as well as more info about me (ego zone xD).
+This is the sample code for training a ML5 model using NodeJS instead of a browser.
 
-# Geeky stuff
+Everything you need to know is explained in this article https://dev.to/merlos/how-to-use-ml5-with-nodejs-and-puppeteer-step-by-step-132e
 
-* The web is built using [jekyll](http://www.jekyllrb.com) (no database, simple update awesome!)
-* It also uses the iconset provided by [fontawesome](http://fortawesome.github.io/Font-Awesome/icons/)
-* To provide partial support of multilingual, I followed [this article from Sylvain Durand](http://sylvaindurand.org/making-jekyll-multilingual/)
-* Redirecting webpages: http://joshualande.com/redirect-urls-jekyll-github/
+# How to use this script
 
-# Licenses
+```bash
+# Download the code and go to the the folder
+cd code/ml5-puppeteer
+# install dependencies
+npm install
 
-Contents/Articles: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+# run the web server with the ML5 script
+./node_modules/serve/bin/serve.js ./public/
+```
 
-Source code distributed under MIT License.
+In another terminal
+
+```
+node index.js
+```
+
+When "DONE!" is displayed on the screen you'll have the model trained and
+you´ll get two files in the `model.json` and `model.weights.bin``
+
+Refer to ml5 documentation on how to load the new model
