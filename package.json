@@ -1,19 +1,24 @@
 {
-  "name": "ml5-puppeteer",
+  "name": "ml5-sug-classifier",
   "version": "1.0.0",
-  "description": "ML5 with puppeteer",
+  "description": "ML5 SUG classifier",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "ml5",
-    "puppeteer"
+    "tensorflow"
   ],
-  "author": "merlos",
+  "author": "ap",
   "license": "MIT",
   "dependencies": {
-    "puppeteer": "^5.4.0",
-    "serve": "^11.3.2"
+    "@tensorflow/tfjs": "^3.9.0",
+    "@tensorflow/tfjs-core": "^3.9.0",
+    "@tensorflow/tfjs-node": "^3.9.0",
+    "@tensorflow/tfjs-vis": "^1.5.1",
+    "axios": "^0.23.0",
+    "csv-parse": "^4.16.3",
+    "seedrandom": "^3.0.5"
   }
 }
