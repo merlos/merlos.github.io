@@ -13,13 +13,13 @@ image: /assets/yop-circle.png
 
   <h2 style="text-align: center"><br><i class="fa fa-home"></i></h2>
   <p style="text-align:center">
-    <img src="/assets/spain.png" style="width:90px" alt="Spain: chocolate with churros">
-     <img src="/assets/croatia.png" style="width:90px" alt="Croatia: the beautiful Plitvice lakes">
-    <img src="/assets/taiwan.png" style="width:90px" alt="Taiwan: Pingxi lantern festival">
-    <img src="/assets/india.png" style="width:90px" alt="India: the amazing Taj Mahal">
-    <img src="/assets/panama.png" style="width:90px" alt="Panama: the skyline of Panama City">
-    <img src="/assets/usa.jpg" style="width:90px" alt="United States: the Liberty Statue (New York)">
-    <img src="/assets/kenya.png" style="width:90px" alt="Lion in Nairobi's National Park">
+    <img src="/assets/spain.png" style="width:90px" title="Spain: chocolate with churros">
+     <img src="/assets/croatia.png" style="width:90px" title="Croatia: the beautiful Plitvice lakes">
+    <img src="/assets/taiwan.png" style="width:90px" title="Taiwan: Pingxi lantern festival">
+    <img src="/assets/india.png" style="width:90px" title="India: the amazing Taj Mahal">
+    <img src="/assets/panama.png" style="width:90px" title="Panama: the skyline of Panama City">
+    <img src="/assets/usa.jpg" style="width:90px" title="United States: the Liberty Statue (New York)">
+    <img src="/assets/kenya.png" style="width:90px" title="Lion in Nairobi's National Park">
   </p>
 
   <p> I was born in Spain, but I have lived in Croatia, Taiwan, India,
