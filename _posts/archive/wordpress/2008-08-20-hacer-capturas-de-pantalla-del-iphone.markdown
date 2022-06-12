@@ -17,7 +17,7 @@ tags:
 - capturas pantalla
 comments: []
 ---
-<p><img class="alignleft" style="margin: 10px; float: left;" src="http://dl.getdropbox.com/u/22698/img/iphone-screenshot.jpg" alt="take screenshots with iphone capturas pantalla" width="312" height="312" />Si quieres hacer capturas de pantalla (screenshots) de tu iPhone, es muy fácil, eso sí, necesitas firmware 2.0.x (el iPhone 3G lo tiene).</p>
+<p><img class="alignleft" style="margin: 10px; float: left;" src="/assets/posts/dropbox/iphone-screenshot.jpg" alt="take screenshots with iphone capturas pantalla" width="312" height="312" />Si quieres hacer capturas de pantalla (screenshots) de tu iPhone, es muy fácil, eso sí, necesitas firmware 2.0.x (el iPhone 3G lo tiene).</p>
 <ol>
 <li>Te vas a la pantalla a la que quieres hacer el la captura</li>
 <li>Pulsas la <strong>tecla central + tecla superior</strong></li>
