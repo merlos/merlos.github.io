@@ -1,6 +1,7 @@
 ---
 layout: post
 lang: en
+author: Merlos
 post_id: 2020-open-gpx-tracker
 title: "How to use Ml5 with nodejs and puppeteer step by step"
 keywords: "ml5, puppeteer, node, machine learning, web machine learning, image classification"
@@ -12,7 +13,7 @@ categories:
 image: '/assets/posts/2015-open-gpx-tracker/open-gpx-tracker.png'
 ---
 
-![ml5 - Nodejs - puppeteer logos](./ml5-nodejs-puppeteer-logos.png)
+![ml5 - Nodejs - puppeteer logos](/assets/posts/2021-ml5/ml5-node-puppeteer.png)
 
 # How to use Ml5 with nodejs and puppeteer step by step
 
@@ -38,7 +39,7 @@ Also, the model we will train is based in MobileNet which is a lightweight model
 
 As example, using [transfer learning](https://en.wikipedia.org/wiki/Transfer_learning), we will train a classification model to differentiate between two types of skateboards: longboards (left) and regular street skateboards (right).
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/rgc5qosmlvvdxko1eko5.jpg)
+![Longboard vs skateboard](/assets/posts/2021-ml5/longboard-vs-skateboard.jpg)
 
 The javascript code for training the modeñ that I will be using here is heavily based on the fantastic [ML5 tutorial of The Coding Train](https://www.youtube.com/watch?v=26uABexmOX4&feature=youtu.be&list=PLRqwX-V7Uu6YPSwT06y_AEYTqIwbeam3y) by [Daniel Shiffman](https://twitter.com/shiffman).
 
