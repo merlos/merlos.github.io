@@ -153,7 +153,7 @@ Now, we have to write the code we will use to train the cad-longboard classifier
 Below you have the code. It is fairly commented but if you need more info you can refer to the [ml5.featureExtractor documentation](https://ml5js.org/reference/api-FeatureExtractor/).
 
 ```html
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Getting Started with ml5.js</title>
