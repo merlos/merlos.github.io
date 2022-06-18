@@ -2,9 +2,9 @@
 layout: post
 lang: en
 post_id: 2020-Better
-title: "TBD"
-keywords: "TBD"
-description: "TBD"
+title: "Write code for people: Dos and donts to improve your React code"
+keywords: "react, javascript, dos, donts"
+description: ""
 categories:
   - ml5
   - machine-learning
@@ -13,30 +13,31 @@ image: '/assets/posts/2015-open-gpx-tracker/open-gpx-tracker.png'
 ---
 
 
-# Write code for people: Dos and donts to improve your React code
+# Write code for people: Dos and don'ts to improve your React code
 
-During the last couple of years I have reviewed many pull requests of React applications. I observed consistently in different developers some practices that could be improved just by thinking: I am writing code for people (other people).
+During the last couple of years I have reviewed many pull requests of React applications. I consistently observed in different developers some practices that could be improved just by keeping in mind the following sentence:
 
+> ### I am writing code for other people.
 
-## Why: General Principles 
+## Why write code for humans? 
 
-Although it seems counter-intuitive, because code is meant to be run by machines, the truth is that good code is written for people. 
+Either if you are writing enterprise applications or creating an open source project, **your code is going to be read and maintained by humans**. This is a **mantra** you must always keep in mind. 
 
-Either if you are writing enterprise applications or creating an open source project, **your code is going to be read and maintained by humans**. This is a **mantra** you must always keep in mind.
-
-Some readers may pose that code is run on machines, so if the code is not efficient you cannot condider it good code. That's a good point, but if the code is readable, it will be easier to understand where to change it to make it faster.
+Some readers may pose that code is run on machines, so if the code is not efficient you cannot consider it good code. That's a good point, but if the code is readable bot not efficient, it will be easier to understand where to change it to make it faster.
 
 Good code that is developer-friendly has several advantages.
 
-1. On boarding of new developers is much smoother and less costly. 
-2. Takes less time to maintain. It is very common to spend a lot of time in an application/library, then you release it, and you don't modify it for a while. One day, after some months you need to change something and you don't remember what you did...
+1. **It is more pleasant to read** and easier to understand.
 
+2. **Reduces onboarding time**. Development teams sometimes need more capacity, so new staff or consultants may join the team. On those cases, human centered code makes on boarding much smoother and less time costly.
 
-# How: Recipies / Tips
+3. **Takes less time to maintain**. It is very common to spend a lot of time in an application/library, then you release it, and, for a while, you don't modify it. One day, after some months you need to change something and... guess what, now you don't remember what you did, so you need to **read** your own code. If it is readabl
+
+## Dos and don'ts to make : Recipes / Tips
 
 We'll start with some general JavaScript tips and then move to more specific tips for React.
 
-## Do use significant names in variables.
+### Do use significant names in variables.
 
 Whenever you create a variable ask yourself: Does the name of a variable convey what is the content of the variable?
 
@@ -91,18 +92,15 @@ Following this idea, there may be cases in JavaScript in which you use shorter v
 ```javascript
 # doc is a instead of document 
 const doc = createNewDocument()
-
 ```
 
 As summary, do give some thought when naming variables in your code. I believe it is one of the hardest part of software development and it differenciates good developers from bad developers.
 
 
-## Do use consistent names across the app. 
+### Do use consistent names across the app. 
 
 Give good names to variables is not enough, they have to be consistent across the whole react app. 
 
-``` 
-```
 
 To solve complex problems we create small independent logic units. We follow the strategy of _divide and conquer_ to make it easier. We implement components in an isolated way, they have some inputs and throw some output. However, we should not forget these units belong to a higher order organism, your application.
 
@@ -110,24 +108,21 @@ Ask yourself upon creating a variable, function, component or a file, if its nam
   Example:
 
   ```javascript
-  //Not good
-  
+  //  ❌  Not that good
   //File1.jsx
   const sectorsData = useSelector(sectorsSelector)
   
   //File2.jsx
   const sectorsList = useSelector(sectorsSelector)
   
-  
-  // Better
+
+   //  ✅  Better
   //File 1
   const sectors = useSelector(sectorsSelector)
   
   //File 2
    const sectors = useSelector(sectorsSelector)
   ```
-
-
 
   For files:
 
@@ -136,29 +131,49 @@ Ask yourself upon creating a variable, function, component or a file, if its nam
   - `/redux/selectors/<entity>Selector.js`
   - etc..
 
-- Do follow the _Don't repeat yourself_ (DRY) principle. That is, if you see that your are repeating similar code or logic in two places, refactor that code to use a function, component, etc.
+### Do follow the _Don't repeat yourself_ (DRY) principle. 
+
+That is, if you see that your are repeating similar code or logic in two places, refactor that code to use a function, component, etc.
+
+```javascript
+  //  ❌  Not that good
+  const getPdfName = (country) => { 
+    const now = new Date()
+    const pdfName = `${country}-${now.getFullYear()}-${now.getMonth()}-${now.getDay()}.pdf` 
+    return pdfName
+  }
+
+  const getExcelName = (country) => { 
+    const now = new Date()
+    const xlsName = `${country}-${now.getFullYear()}-${now.getMonth()}-${now.getDay()}.xls` 
+    return xlsName
+  }
+  
+  //  ✅  Better
+  const buildFilename = (name, extension) => {
+    const now = new Date()
+    return `${name}-${now.getFullYear()}-${now.getMonth()}-${now.getDay()}.${extension}` 
+  }
+
+   const gePdfName = (country) => {  
+    return buildFileName(country, '.pdf')
+   }
+
+  const getExcelName = (country) => { 
+   return builExcelName(country, '.xls')
+  }
+``` 
 
 
-## Do keep files short. 
+### Do keep files short
 
 I use 200 lines as a benchmark. Specially when we talk about React components, if you have a file that has more than 200 lines, ask yourself if you can split it in smaller components.
 
-Also, if the large majority of your component code is for fetching and processing data, think about moving that code to support/helper files.
+Also, if the large majority of your component code is for fetching and processing data, think about moving that code to support/helper files. For example, you can create a folder `/src/lib/` and keep there your utility functions.
 
-/src/lib/
+Also, it is not advisable to have more than a certain amount of files (~10-20) in the same folder. Structuring the folder into sub-folders makes the project more readable. 
 
-----
-How to structure a large project is too broad and out of the scope of this guide, but  
-
-```
-/src/components/ => JSX components
-/src/services/ => API, authentication oprations etc...
-/src/helpers/ => data transformation functions
-```
-----
-
-## Do create a compact code.
-
+### Do create a compact code.
 
 ```javascript
 // ❌ Not that good
@@ -184,9 +199,9 @@ How to structure a large project is too broad and out of the scope of this guide
   const handleClick = newValue => onClick && onClick(newValue.toString())
 ```
 
-Although compact code as a general principle is good, it may sometimes obfuscate what is the code actually doing. So,
+Although compact code as a general principle is good, it may sometimes obfuscate what is the code actually doing. So:
 
-## Do document your code. 
+### Do document your code. 
 
 Specially for helper functions the interface needs to be clear.
 
@@ -204,7 +219,7 @@ Do include comments for pieces of code that may not be very obvious. Example:
    * Counts the number of words within the passed nodes
    *
    * @param {Node} SlateJS nodes
-   * @returns integer Number of words
+   * @returns {integer} Number of words
    */
   editor.countWords = nodes => {
     const content = editor.serialize(nodes); // one string with all node contents
@@ -213,19 +228,15 @@ Do include comments for pieces of code that may not be very obvious. Example:
   };
   ```
  
-Documenting your code is another 
-
-## Do use linters and code formatters
+### Do use linters and code formatters
 
 _Linters_ are code analyzers that provide estilistic suggestions. The most widely spread in Javascript is [esLint](https://eslint.org/). Setting it up in a react application is pretty easy.
 
 The other tool that will make your code more readable and save you time is a code formatter. It will indent and break the lines of your code. It will really make your code much easier to read and will save you time. In JavaScript we are lucky, we have  [prettier](https://prettier.io/) that formats your code on save. 
 
-
-## Do use `on` and `handle` as prefix on event props and handlers 
+### Do use `on` and `handle` as prefix on event props and handlers 
 
 This is a _de facto_ standard on React naming conventions. It is widely used on the official react documentation and gives the reader a cue on what is the prop for.
-
  
 For event props use `on` as prefix (for instance, `onClick`, `onSubmit`, `onBlur`).
 
@@ -253,7 +264,7 @@ For the handlers of those events use the prefix `handle` (for instance, `handleC
 	// ✅ Better
 	export default function SendEmailForm (onSendEmail) {
 
-	  handleOnSubmit(email) {
+	  handleSubmit(email) {
 	    // process email info
 	    // ...
 	    //
@@ -263,7 +274,7 @@ For the handlers of those events use the prefix `handle` (for instance, `handleC
 	  return(
 	   <form>
 	     ... 
-	     <input type="submit" onClick={sendEmailWasClicked}>
+	     <input type="submit" onClick={handleSubmit()}>
 	       Send email
 	     </input>
 	     ...
@@ -272,7 +283,7 @@ For the handlers of those events use the prefix `handle` (for instance, `handleC
 
 ```
 
-## Do not add handler code in the render
+### Do not add handler code in the render
 
 In my experience it makes the code harder to read when the logic of the handler is within the render. 
 
@@ -324,12 +335,7 @@ Example:
 	)
 ```
 
-  
-
-
-
-
-## Do use `const` by default
+### Do use `const` by default
 Whenever you create a _variable_ use `const` by default. Use `let`
 only when it is going to be assigned several times. Avoid `var`.
 
@@ -368,74 +374,84 @@ Note that you assign a variable when the `name` is in front of an `=`. So  you c
 Only when you put a `const` before `=` more than once, the code won't run.
 
 
-## Do use the best maping function in arrays
+### Do use the best maping function in arrays
 
-  1. Use `map()` for returning an array with the same number of elements.
-	
-	```javascript
-		const numbers = [1, 2, 3]
-  		const double =  numbers.map( number => (2 * number)) // [2, 4, 6]
-  	```	
-  
-  2. Use `filter()` for returning the items that match a _criterium_.
-	
-	```javascript
-		const numbers = [1, 2, 3]
-  		const double =  numbers.filter( number => (number > 1)) // [2, 3]
-  	```	
-  
-  3. Use `find()` for searching the first item that matches a _cirterium_.
-	
-	```javascript
-		const numbers = [1, 2, 3]
-  		const double =  numbers.find( number => (number > 1)) // [2]
+1. Use `map()` for returning an array with the same number of elements.
+  ```javascript
+  const numbers = [1, 2, 3]
+  const double =  numbers.map( number => (2 * number)) // [2, 4, 6]
   ```	
   
-  4. Use `forEach()` for not returing an array.
- 
+2. Use `filter()` for returning the items that match a _criterium_.
 	```javascript
+  const numbers = [1, 2, 3]
+  const double =  numbers.filter( number => (number > 1)) // [2, 3]
+  ```	
+
+3. Use `find()` for searching the first item that matches a _cirterium_.
+
+	```javascript
+    const numbers = [1, 2, 3]
+    const double =  numbers.find( number =>  (number > 1)) // [2]
+  ```
+
+4. Use `forEach()` for not returing an array.
+   ```javascript
      const list = [1, 2, 3] 
-     let sum list.forEach( number => sum += number) // 6
-	```
+     let sum = 0
+     list.forEach( number => sum += number) // 6
+	  ```
 
-
-
-## Do handle situations in which there is no value
+### Do handle situations in which there is no value
 
   Example:
 
   ```javascript
+  // ❌ Not that good
   export default function MyForm(value, onSubmit) {
-  const handleOnSubmit => (newValue) => {
-  // do whatever other transformations
-  onClick(newValue)
-  }
-  return (
-  {/* this assumes input handles null or empty values correctly */}
-  <Input value={value} />
-  <Button onSubmit={handleOnSubmit}>Submit</Button>
-  }
+    
+    //...
 
-  // Better
+    const handleOnSubmit => (newValue) => {
+      // do whatever other transformations
+      onClick(newValue)
+    }
+    
+    //...
+
+    return (
+    {/* this assumes input handles null or empty values correctly */}
+      <Input value={value} />
+      <Button onSubmit={handleOnSubmit}>Submit</Button>
+    }
+
+  // ✅ Better
   const default function MyForm(value, onSubmit) {
+    
+    //...
 
     const handleOnSubmit = () => {
     	// It won't do anything BUT won't crash.
     	onClick && onClick(values)
     }
+
+    //...
+
+  }
   ```
 
   Example 2:
 
   ```javascript
-    //Not good
+     // ❌ Not that good
     export default function IndicatorsList({sectors}){
     return(
       <ul>
        {sector.indicators.map(indicator => <li key={indicator.id}>{indicator.text}</> )}
       </ul>
     }
-    //Better
+
+    // ✅ Better
     //It receives the indicator list
     export default function IndicatorsList({indicators}) {
     indicators = indicators || []
@@ -450,25 +466,41 @@ Only when you put a `const` before `=` more than once, the code won't run.
 
   ```
 
-- Do use the following order of elements when coding your components (It is just a convention) 1. state,variables and constants 2. `useEffects` 3. effect handlers (`handleOnClick`, etc.)
+### Be consistent on the order in which you write the code. 
+
+Always follow the same order of the imports, variables and functions within the code of the components.For example, I like the folowing order:
+
+1. imports
+2. state, variables and constants 
+3. `useEffects` 
+4. effect handlers (`handleOnClick`, etc.)
+5. `return()` function
+6. Prop defaults and PropTypes
+
+Indeed, for the imports, you may even define an actual order:
+
+1. React related stuff
+2. General such as react-router
+4. External UI related components
+5. Redux actions, selectors
+6. Hooks
+4. Custom Application UI components
 
 
-- Do add validations for fields and handle form errors. When there is a network request, it can fail. Your code has to handle that failure and display the appropriate feedback to the user.
-  1. Page error when the issue is at the page level (loading fundamental data).
-  2. Validation errors when the issues are related with the data provided by the user
-  3. Display an alert error when the issue is related with a submit button.
-  4. Async badge error on asynchronous calls of onBlur.
 
----
+### Do add validations for fields and handle form errors. 
 
+Gererally, when you read a tutorial or watch a video that teaches react or any other library/programming language, they do not manage errors other than display a console message. Their code is simple, but in real applications user may fill unexpected data, there may be network errors, API may have bug, the user may not have permissions to access a resource, or your authentication token may have expired. Your code has to manage all these situations gracefully and display the appropriate feedback to the user so he can recover from them.
 
+Types of errors and how to manage them from the user experience and from the code point of view is something that requires a deep dive, but we will leave that for another article.
 
 ## Wrapping up
 
-Always keep in mind that 
+Always keep in mind: 
 
-> **You write code for people, not machines** - although it may look counterintuitive. 
+> ### **I write code for other people.** 
 
-So always try to think if a reader would understand it. Code with meaninful variables, that follows some wide spread conventions, that is documented and that, in general is _developer friendly_  will be much easier to maintain, less prone to errors and if a new team member joins, she/he will be on board and productive in less time. 
+So always try to think if a reader would understand it. Code being consistent, using meaninful variables, document the code, and follow some wide spread conventions.  _developer (human) friendly_  code will be much easier to maintain, less prone to errors and if a new team member joins, she/he will be on boarded and productive in less time. 
 
-Some of the recommendations I expose here may have corner case exceptions  so use the common sense in that case. Also, if you have any argument against or you can complement any or find any issue leave a comment
+Note that the above mentioned dos and don'ts  are general guidelines, and some of the recommendationsmay have corner cases in which you can argue not to follow them, in those cases use your common sense.
+
