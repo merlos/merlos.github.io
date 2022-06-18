@@ -15,6 +15,7 @@ image: '/assets/posts/2015-open-gpx-tracker/open-gpx-tracker.png'
 
 # Write code for people: Dos and don'ts to improve your React code
 
+
 During the last couple of years I have reviewed many pull requests of React applications. I consistently observed in different developers some practices that could be improved just by keeping in mind the following sentence:
 
 > ### I am writing code for other people.
@@ -31,7 +32,7 @@ Good code that is developer-friendly has several advantages.
 
 2. **Reduces onboarding time**. Development teams sometimes need more capacity, so new staff or consultants may join the team. On those cases, human centered code makes on boarding much smoother and less time costly.
 
-3. **Takes less time to maintain**. It is very common to spend a lot of time in an application/library, then you release it, and, for a while, you don't modify it. One day, after some months you need to change something and... guess what, now you don't remember what you did, so you need to **read** your own code. If it is readabl
+3. **Takes less time to maintain**. It is very common to spend a lot of time in an application/library, then you release it, and, for a while, you don't modify it. One day, after some months you need to change something and... guess what, now you don't remember what you did, so you need to **read** your own code.
 
 ## Dos and don'ts to make : Recipes / Tips
 
@@ -82,7 +83,6 @@ In other languages like Python it is common to use acronmys/abreviated versions 
 import numpy as np
 import tensorflow as tf
 import seaborn as sns
-
 ```
 
 The rational of this convention is to type less, be more productive (Now with autocomplete of the editors is no longer true), make the code less verbose and "faster" to read for expert eyes.
@@ -90,22 +90,19 @@ The rational of this convention is to type less, be more productive (Now with au
 Following this idea, there may be cases in JavaScript in which you use shorter versions, for example:
 
 ```javascript
-# doc is a instead of document 
+// doc instead of document 
 const doc = createNewDocument()
 ```
 
-As summary, do give some thought when naming variables in your code. I believe it is one of the hardest part of software development and it differenciates good developers from bad developers.
-
+As summary, do give some thought when naming variables in your code. I believe this is one of the hardest part of software development and it differentiates good developers from bad developers.
 
 ### Do use consistent names across the app. 
 
 Give good names to variables is not enough, they have to be consistent across the whole react app. 
 
-
 To solve complex problems we create small independent logic units. We follow the strategy of _divide and conquer_ to make it easier. We implement components in an isolated way, they have some inputs and throw some output. However, we should not forget these units belong to a higher order organism, your application.
 
-Ask yourself upon creating a variable, function, component or a file, if its name is consistent with the names already used in the application. 
-  Example:
+Ask yourself upon creating a variable, function, component or a file, if its name is consistent with the names already used in the application. Example:
 
   ```javascript
   //  ❌  Not that good
@@ -174,16 +171,6 @@ Also, if the large majority of your component code is for fetching and processin
 Also, it is not advisable to have more than a certain amount of files (~10-20) in the same folder. Structuring the folder into sub-folders makes the project more readable. 
 
 ### Do create a compact code.
-
-```javascript
-// ❌ Not that good
-   -- example of using default initilizer
-   --- example of using ? : operator
-    
-  // ✅ Better
-   
-```
-
 
 ```javascript
   // ❌ Not that good
@@ -400,7 +387,7 @@ Only when you put a `const` before `=` more than once, the code won't run.
      const list = [1, 2, 3] 
      let sum = 0
      list.forEach( number => sum += number) // 6
-	  ```
+   ```
 
 ### Do handle situations in which there is no value
 
@@ -503,4 +490,3 @@ Always keep in mind:
 So always try to think if a reader would understand it. Code being consistent, using meaninful variables, document the code, and follow some wide spread conventions.  _developer (human) friendly_  code will be much easier to maintain, less prone to errors and if a new team member joins, she/he will be on boarded and productive in less time. 
 
 Note that the above mentioned dos and don'ts  are general guidelines, and some of the recommendationsmay have corner cases in which you can argue not to follow them, in those cases use your common sense.
-
