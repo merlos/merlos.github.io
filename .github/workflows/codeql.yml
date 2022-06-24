@@ -47,7 +47,7 @@ jobs:
       uses: ruby/setup-ruby@v1.110.0
       #with:
         # Engine and version to use, see the syntax in the README. Reads from .ruby-version or .tool-versions if unset.
-        #ruby-version: # optional, default is default
+        ruby-version: 2.6.8 # optional, default is default
         # The version of RubyGems to use. Either 'default' (the default), 'latest', or a version number (e.g., 3.3.5).
         #For 'default', no action is taken and the version of RubyGems that comes with Ruby by default is used.
         #For 'latest', `gem update --system` is run to update to the latest RubyGems version.
