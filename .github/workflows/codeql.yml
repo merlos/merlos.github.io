@@ -42,10 +42,10 @@ jobs:
       uses: actions/checkout@v3
     
     - name: Setup Ruby, JRuby and TruffleRuby
-     # You may pin to the exact commit or the version.
-     # uses: ruby/setup-ruby@8029ebd6e5bd8f4e0d6f7623ea76a01ec5b1010d
+      # You may pin to the exact commit or the version.
+      # uses: ruby/setup-ruby@8029ebd6e5bd8f4e0d6f7623ea76a01ec5b1010d
       uses: ruby/setup-ruby@v1.110.0
-      with:
+      #with:
         # Engine and version to use, see the syntax in the README. Reads from .ruby-version or .tool-versions if unset.
         #ruby-version: # optional, default is default
         # The version of RubyGems to use. Either 'default' (the default), 'latest', or a version number (e.g., 3.3.5).
