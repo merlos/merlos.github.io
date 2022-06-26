@@ -2,9 +2,9 @@
 layout: post
 lang: en
 post_id: 2022-rasbperry-pi-realtek-wifi-n-rtl8188fu
-title: "Raspberrypi: Install USB Wifi Realtek 0bda:f179 using rtl8188fu module"
+title: "Raspberry Pi: Install USB Wifi Realtek 0bda:f179 using rtl8188fu module"
 keywords: "raspberry, modules, realtek, obda:f179, modules, linux, kernel, rtl8188fu"
-description: "How to install a USB wifi realtek 0bda:f179 in a raspberry pi 4 model B using the linux kernel module RTL8188FU"
+description: "How to install a USB wifi Realtek 0bda:f179 in a Raspberry Pi 4 model B using the linux kernel module RTL8188FU"
 categories:
   - rasbperrypi
 image: '/assets/posts/2015-open-gpx-tracker/open-gpx-tracker.png'
@@ -12,7 +12,7 @@ image: '/assets/posts/2015-open-gpx-tracker/open-gpx-tracker.png'
 
 ![Realtek usb wifi 8bda:f179 rtl8188fu](/assets/posts/2022-rpi-usb-wifi/realtek-usb-wifi-0bda-f179-rtl8188fu.jpg)
 
-I bouthg a US$5.00 wifi usb dongle for a [Raspberry PI 4 Model B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/), but when I plugged it, it did not work (below the output of `dmesg` after plugging in the device). 
+I bouthg a US$5.00 wifi usb dongle for a [Raspberry Pi 4 Model B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/), but when I plugged it, it did not work (below the output of `dmesg` after plugging in the device). 
 
 ```
 [  294.567130] usb 1-1.2: new full-speed USB device number 4 using xhci_hcd
@@ -37,7 +37,7 @@ Product information
   Manufacturer:	Realtek
 ```
 
-With that information I found that the [RTL8188 was the module I needed](https://askubuntu.com/questions/1062402/cant-find-wifi-drivers-for-0bdaf179-realtek-semiconductor-corp) and the [steps to install it](https://github.com/kelebek333/rtl8188fu/tree/arm#how-to-install-for-arm-devices), though they were not directly working on a raspberry pi. I needed to solve a couple of issues. Below the steps.
+With that information I found that the [RTL8188 was the module I needed](https://askubuntu.com/questions/1062402/cant-find-wifi-drivers-for-0bdaf179-realtek-semiconductor-corp) and the [steps to install it](https://github.com/kelebek333/rtl8188fu/tree/arm#how-to-install-for-arm-devices), though they were not directly working on a Raspberry Pi. I needed to solve a couple of issues. Below the steps.
 
 
 
