@@ -93,6 +93,28 @@ Now we create a symbolic link
 ln -s /lib/modules/$(uname -r)/build/arch/arm /lib/modules/$(uname -r)/build/arch/armv7l
 ```
 
+By default the driver comes with all debug messages activated. It is pretty annoying but useful if something goes wrong. To disable them edit `rtl8188fu-arm/include/autoconf.h` by prepending `//` in the CONFIG_DEBUG leaving the debug section as below 
+
+```c
+/*
+ * Debug Related Configure
+ */
+//#define CONFIG_DEBUG /* DBG_871X, etc... */ 
+#ifdef CONFIG_DEBUG
+        #define DBG     1       /* for ODM & BTCOEX debug */
+        #define DBG_PHYDM_MORE 0
+#else /* !CONFIG_DEBUG */
+        #define DBG     0       /* for ODM & BTCOEX debug */
+        #define DBG_PHYDM_MORE 0
+#endif /* CONFIG_DEBUG */
+
+#if DBG_PHYDM_MORE
+        //#define CONFIG_DEBUG_RTL871X /* RT_TRACE, RT_PRINT_DATA, _func_enter_, _func_exit_ */
+#endif /* DBG_MORE */
+
+//#define CONFIG_PROC_DEBUG
+```
+
 Add the module to the tree for build
 ```bash
 dkms add ./rtl8188fu-arm
