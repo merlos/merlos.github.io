@@ -93,7 +93,14 @@ Now we create a symbolic link
 ln -s /lib/modules/$(uname -r)/build/arch/arm /lib/modules/$(uname -r)/build/arch/armv7l
 ```
 
-By default the driver comes with all debug messages activated. It is pretty annoying but useful if something goes wrong. To disable them edit `rtl8188fu-arm/include/autoconf.h` by prepending `//` in the CONFIG_DEBUG leaving the debug section as below 
+By default the driver comes with all debug messages activated. It is pretty annoying but useful if something goes wrong. To disable them edit `rtl8188fu-arm/include/autoconf.h` by commenting (prepending `//`) the three lines as below
+
+```c
+//#define CONFIG_DEBUG /* DBG_871X, etc... */ 
+//#define CONFIG_DEBUG_RTL871X /* RT_TRACE,
+//#define CONFIG_PROC_DEBUG
+```
+The output should be something like:
 
 ```c
 /*
