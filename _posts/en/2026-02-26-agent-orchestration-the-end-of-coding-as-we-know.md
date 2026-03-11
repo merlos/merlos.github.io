@@ -2,7 +2,7 @@
 layout: post
 lang: en
 post_id: 2026-agent-orchestration
-title: "How to setup Metasploitable in a Mac with M1 chip"
+title: "Agent orchestration. The end of coding as we know"
 keywords: ai, agentic orchestration, vibe coding, coding with agents
 description: "Is software development doomed because of AI or is it
 the best time to be a software developer? My thoughts about coding
