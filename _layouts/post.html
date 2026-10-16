@@ -1,36 +1,56 @@
 ---
 layout: default
 ---
-<div class="post">
+<article class="post">
   <header class="post-header">
+    {% if page.categories %}
+    <p class="post-categories">{{ page.categories | join: " / " }}</p>
+    {% endif %}
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • by {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+    {% if page.description %}
+    <p class="post-description">{{ page.description | strip_newlines }}</p>
+    {% endif %}
+    {% assign reading_time = content | number_of_words | divided_by: 200 | plus: 1 %}
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time><span aria-hidden="true">&middot;</span>{{ reading_time }} min read{% if page.author %}<span aria-hidden="true">&middot;</span>by {{ page.author }}{% endif %}{% if page.lang %}<span class="post-language">{{ page.lang | upcase }}</span>{% endif %}</p>
   </header>
-  <article class="post-content">
+
+  {% if page.hero_image %}
+  <figure class="post-hero">
+    <img src="{{ page.hero_image | prepend: site.baseurl }}" alt="{{ page.hero_alt | default: page.title }}">
+    {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+
+  <div class="post-content">
     {{ content }}
-  </article>
-  
-  
-  
-  
-  
-<!-- comments -->
+  </div>
 
-{% if page.disqus_comments %}
-  <br class="clearfix">
-  <h2>What do you think?</h2>
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'merlos'; // required: replace example with your forum shortname
+  <nav class="post-navigation" aria-label="Article navigation">
+    {% if page.previous %}
+    <a class="post-navigation-link post-navigation-previous" href="{{ page.previous.url | prepend: site.baseurl }}">
+      <span>Older article</span>{{ page.previous.title }}
+    </a>
+    {% endif %}
+    {% if page.next %}
+    <a class="post-navigation-link post-navigation-next" href="{{ page.next.url | prepend: site.baseurl }}">
+      <span>Newer article</span>{{ page.next.title }}
+    </a>
+    {% endif %}
+  </nav>
 
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        
-{% endif%}
+  {% if page.disqus_comments %}
+  <section class="post-comments">
+    <h2>What do you think?</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'merlos';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </section>
+  {% endif %}
+</article>
