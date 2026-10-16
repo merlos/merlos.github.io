@@ -1,21 +1,21 @@
 {% assign post = include.post %}
 
+<article class="post-preview">
+  {% if post.categories %}<p class="post-preview-categories">{{ post.categories | join: " / " }}</p>{% endif %}
+  <h2 class="bottom-close">
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </h2>
+  <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.lang %}<span class="post-language">{{ post.lang | upcase }}</span>{% endif %}{% if post.disqus_comments %}<i class="fa fa-comment" title="Comments enabled"></i>{% endif %}</p>
+  {% if post.description %}<p class="post-preview-description">{{ post.description | strip_newlines | truncate: 180 }}</p>{% endif %}
 
-<h2 class="bottom-close">
- <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-   {%if post.lang == "en" %} <img src="/assets/en.png" alt="ENGLISH">{%endif%} 
-   {{ post.title }} </a>
-</h2>
-<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} {% if post.disqus_comments %}<i class="fa fa-comment" title="comments on"></i> {% endif %}</span>
-  
-{%if post.lang == "es" %}
-      {% assign postes=site.posts | where: "post_id", post.post_id | where: "lang", "en"%} 
-      {% assign readit= "read it in English" %}
-{% else %}
-   {% assign postes=site.posts | where: "post_id", post.post_id | where: "lang", "es"%}
-   {% assign readit= "leerlo en español" %}
-{% endif %}
-      {% if postes[0] %}
-        <small><a class="greyed" href="{{ postes[0].url | prepend: site.baseurl }}" title="{{ postes[0].title }}">{{readit}}</a></small>
-      {% endif %}
-
+  {% if post.lang == "es" %}
+    {% assign postes = site.posts | where: "post_id", post.post_id | where: "lang", "en" %}
+    {% assign readit = "Read it in English" %}
+  {% else %}
+    {% assign postes = site.posts | where: "post_id", post.post_id | where: "lang", "es" %}
+    {% assign readit = "View Spanish version" %}
+  {% endif %}
+  {% if postes[0] %}
+    <a class="post-translation" href="{{ postes[0].url | prepend: site.baseurl }}" title="{{ postes[0].title }}">{{ readit }}</a>
+  {% endif %}
+</article>
