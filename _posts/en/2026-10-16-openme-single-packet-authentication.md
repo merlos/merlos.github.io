@@ -8,7 +8,10 @@ description: "OpenMe is a cross-platform Single Packet Authentication tool that 
 categories:
   - security
   - dev
+image: '/assets/posts/2026-openme/openme-logo.png'
 ---
+
+![OpenMe logo](/assets/posts/2026-openme/openme-logo-400.png)
 
 Most internet-facing services begin with the same trade-off: expose a port so legitimate users can reach it, and accept that scanners, bots, and attackers can see it too. Secure Shell (SSH) is a common example. Even with key-only authentication, a public SSH port is continuously discovered, probed, and logged.
 
